@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .card {
+        @apply w-40 h-64 mt-5 shadow-md rounded-lg mr-4 flex-shrink-0 transform transition-all hover:-translate-y-4 hover:shadow-xl lg:w-48 lg:h-72 lg:mr-7 lg:mt-8;
+    }
+
+    .half-card-img {
+        @apply w-full h-3/4 rounded-t-lg bg-cover;
+    }
+
+    .half-card-content {
+        @apply w-full h-1/4 rounded-b-lg flex flex-col justify-center gap-1 p-3;
+    }
+
+    .content-title {
+        @apply font-bold text-white text-base;
+    }
+
+    .content-description{
+        @apply text-white text-xs;
+    }
+
+    .BigCard{
+        @apply w-full h-96 bg-cover rounded-xl
+    }
+
+    .BigCardTitle {
+        @apply text-3xl px-8 pt-6 pb-2 font-semibold text-white
+    }
+
+    .BigCardDescription{
+        @apply text-sm pl-8 text-black mr-16
+    }
+
+    .details-summary {
+        @apply flex flex-wrap md:space-x-1 space-y-1 md:space-y-0 mb-4
+    }
+
+    .details-h3{
+        @apply cursor-pointer flex flex-1 bg-cyan-400 dark:bg-gray-500 text-white font-bold rounded hover:bg-blue-500 dark:hover:bg-gray-700 px-4 py-3 text-sm focus:outline-none
+    }
+
+    .details-description {
+        @apply block p-6 rounded-lg shadow-lg bg-white
+    }
+
+    .nav-items {
+        @apply font-bold text-base text-primary
+    }
+
+    .nav-icons{
+        @apply text-base text-primary
+    }
+
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html  lang="en" x-data="{dark:false}" x-bind:class="dark ? 'dark' : ''">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>PlatziTravel</title>
+</head>
+<body class="font-Montserrat dark:bg-gray-800">
+        <nav class="w-full h-14 hidden bg-white lg:flex lg:fixed lg:z-10 p-4 justify-between border-b-4 border-cyan-600 dark:bg-slate-500">
+            <div class="h-auto w-auto">
+                <p class="text-xl text-primary dark:text-white">Platzi Travel</p>
+            </div>
+
+            <div class="flex space-x-8">
+                <a class="nav-items dark:text-white" href="#home">Inicio</a>
+                <a class="nav-items dark:text-white" href="#recomendadas">Recomendados</a>
+                <a class="nav-items dark:text-white" href="#rentas_destacadas">Rentas</a>
+                <a class="nav-items dark:text-white" href="#faqs">FAQs</a>
+                <a class="nav-items dark:text-white" href="#sobre_nosotros">Sobre nosotros</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="">
+                    <i class="nav-icons fa-search fa-solid dark:text-white"></i>
+                </a>
+                <button x-on:click="dark=!dark">
+                    <i class="nav-icons fa-solid fa-moon dark:text-red-500"></i>
+                </button>
+                <a href="./registrationForm.html">
+                    <i class="nav-icons fa-user fa-solid dark:text-white"></i>
+                </a>
+            </div>
+        </nav>
+
+    <section class="w-full h-full">
+        <div id="home" class="lg:pt-12">
+            <div class="w-full h-3/4">
+                <div class="w-full h-full flex flex-col absolute space-y-80 py-4 items-center lg:space-y-0 lg:items-start lg:pt-24 lg:justify-start">
+                    <input class="w-3/4 text-center rounded-full outline-none p-3 shadow-sm transition ease-in-out duration-500 focus-within:shadow-sm focus:ring-2 transform focus:scale-x-105 lg:hidden" placeholder="San Francisco" type="search" name="" id="search">
+                    <div class="hidden h-auto lg:w-2/5 lg:flex pb-4">
+                        <p class="text-3xl ml-16 font-bold text-red-800">Encuentra mas ubicaciones como esta</p>
+                    </div>
+                    <button class="w-2/4 p-2 text-lg text-white shadow-sm rounded-full bg-cyan-300 dark:bg-cyan-600 font-semibold border-2 border-slate-200 transition duration-500 ease-in-out hover:bg-cyan-600 hover:text-white transform hover:-translate-y-1 hover:scale-100 lg:ml-16 lg:w-1/4">
+                        Explorar
+                    </button>
+                </div>
+                <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+                    <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="py-4 px-3" id="recomendadas">
+            <p class="text-2xl font-semibold py-2 text-primary dark:text-white">Recommended</p>
+            <div class="w-auto flex flex-row overflow-x-scroll overflow-y-hidden">
+
+                <div class="card">
+                    <div class="half-card-img bg-norway"></div>
+                    <div class="half-card-content bg-cyan-200 dark:bg-gray-500">
+                        <p class="content-title">Norway</p>
+                        <p class="content-description">Beautiful Landscapes</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-sanFrancisco"></div>
+                    <div class="half-card-content bg-cyan-300 dark:bg-gray-700">
+                        <p class="content-title">San Francisco</p>
+                        <p class="content-description">Incredible city</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-miami"></div>
+                    <div class="half-card-content bg-cyan-400 dark:bg-gray-500">
+                        <p class="content-title">Miami</p>
+                        <p class="content-description">Nice shopping</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-yosemite"></div>
+                    <div class="half-card-content bg-cyan-500 dark:bg-gray-700">
+                        <p class="content-title">Yosemite</p>
+                        <p class="content-description">Great Parks</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-LA"></div>
+                    <div class="half-card-content bg-cyan-400 dark:bg-gray-500">
+                        <p class="content-title">Los Angeles</p>
+                        <p class="content-description">Amazing experience</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-new_york"></div>
+                    <div class="half-card-content bg-cyan-300 dark:bg-gray-700">
+                        <p class="content-title">New York</p>
+                        <p class="content-description">Ultra skyscrapers</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="half-card-img bg-bali"></div>
+                    <div class="half-card-content bg-cyan-200 dark:bg-gray-500">
+                        <p class="content-title">Bali</p>
+                        <p class="content-description">Unique paradise</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="px-6 w-full" id="rentas_destacadas">
+            <p class="text-3xl text-primary font-semibold pb-6 mt-2 dark:text-white">Best choices</p>
+            <div class="w-full h-auto flex flex-col space-y-4 items-center justify-center lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:gap-3">
+                <div class="BigCard bg-chicago lg:bg-center lg:col-span-2 lg:row-span-1">
+                    <p class="BigCardTitle">Chicago</p>
+                    <p class="BigCardDescription">2 dorms, 1 bathroom and kitchen</p>
+                </div>
+                <div class="BigCard bg-europe">
+                    <p class="BigCardTitle">Europe</p>
+                    <p class="BigCardDescription">3 dorms, 2 bathroom, courtyard and kitchen</p>
+                </div>
+                <div class="BigCard bg-iceland lg:col-span-1 lg:row-span-3 lg:h-full">
+                    <p class="BigCardTitle">Iceland</p>
+                    <p class="BigCardDescription">1 dorms, 1 bathroom and kitchen</p>
+                </div>
+                <div class="BigCard bg-switzerland">
+                    <p class="BigCardTitle">Switzerland</p>
+                    <p class="BigCardDescription">2 dorms, 2 bathroom and kitchen</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-auto" id="faqs">
+            <div class="w-full h-auto px-8 flex flex-col space-y-4">
+                <p class="text-3xl text-primary font-semibold mt-6 dark:text-white">FAQS</p>
+
+                <details>
+                    <summary class="details-summary">
+                    <h3 class="details-h3">Política de Cancelación</h3>
+                    </summary>
+                    <div>
+                        <p class="details-description">
+                        Para estancias menores a una semana es importante avisar con 3 días de
+                        anticipación, de caso contario será sancionado.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="details-summary">
+                    <h3 class="details-h3">Métodos de pago</h3>
+                    </summary>
+                    <div>
+                        <p class="details-description">
+                            Aceptamos distintos métodos de pago: VISA, MasterCard, American Express,
+                            Paypal y Binance.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="details-summary">
+                    <h3 class="details-h3">Mascotas</h3>
+                    </summary>
+                    <div>
+                        <p class="details-description">
+                            El tema de las mascotas dependerá directamente del anfitrión.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="details-summary">
+                    <h3 class="details-h3">Información de Seguridad</h3>
+                    </summary>
+                    <div>
+                        <p class="details-description">
+                            Todas nuestras estancias cuentan con seguro en caso de accidentes.
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary class="details-summary">
+                    <h3 class="details-h3">Estancias Largas</h3>
+                    </summary>
+                    <div>
+                        <p class="details-description">
+                            Contamos con estancias de hasta 3 meses, en este caso es requerido un
+                        anticipo con un monto del 50% del valor de la renta.
+                        </p>
+                    </div>
+                </details>
+                
+            </div>
+        </div>
+
+    </section>
+    <footer class="w-full h-auto bg-gray-50 px-6 pt-6 pb-16 space-y-2 dark:bg-gray-800">
+        <p class="text-lg dark:text-white">Acerca de</p>
+        <p class="text-sm dark:text-white">Investing</p>
+        <p class="text-sm dark:text-white">Work with us</p>
+        <p class="text-sm dark:text-white">Terms and conditions</p>
+        <p class="text-sm dark:text-white">Platzi Travel Inc.</p>
+        <i class="fa-brands fa-twitter text-cyan-400"></i>
+        <i class="fa-brands fa-instagram text-purple-400"></i>
+    </footer>
+
+    <div id="tab_bar" class="w-full h-14 bg-cyan-50 dark:bg-gray-600 flex items-center justify-center space-x-10 fixed left-0 bottom-0 lg:hidden">
+        <a href="#recomendadas">
+        <i class="fa-solid fa-heart text-xl text-gray-300 dark:text-white"></i>
+        </a>
+        <a href="#search">
+        <i class="fa-solid fa-magnifying-glass text-xl text-gray-300 dark:text-white"></i>
+        </a>
+        <button x-on:click="dark=!dark">
+            <i class="nav-icons fa-solid fa-moon text-red-500"></i>
+        </button>
+        <a href="./registrationForm.html">
+        <i class="fa-solid fa-user text-xl text-gray-300 dark:text-white"></i>
+        </a>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
