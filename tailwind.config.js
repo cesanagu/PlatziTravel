@@ -1,12 +1,11 @@
 module.exports = {
-  content: ["./public/index.html", "./src/**/*.{html,js}"],
+  content: ["index.html", "./src/**/*.{html,js}"],
   darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
         norway: "url('../img/norway.jpg')",
-        sanFrancisco: 
-        "url('../img/sanFrancisco.jpg')",
+        sanFrancisco: "url('../img/sanFrancisco.jpg')",
         sanFranciscoDesktop: "url('../img/sanFranciscoDesktop.jpg')",
         yosemite: "url('../img/yosemite.jpg')",
         LA: "url('../img/LA.jpg')",
